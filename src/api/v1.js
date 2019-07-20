@@ -19,11 +19,54 @@ router.get('/api/v1/:model/schema', (request, response) => {
   response.status(200).json(request.model.jsonSchema());
 });
 
-
+/**
+ * This function comment is parsed by doctrine
+ * @route GET /api/v1/:model
+ * @param {id} uuid of entry - not required.
+ * @returns {object} 200 - An array of user info
+ * @returns {Error}  default - Unexpected error
+ */
 router.get('/api/v1/:model', handleGetAll);
+
+/**
+ * This function comment is parsed by doctrine
+ * @route POST /api/v1/:model
+ * @param {object} req.body.name - required
+ * @param {id} uuid of entry - not required.
+ * @returns {object} 200 - An array of user info
+ * @returns {Error}  default - Unexpected error
+ */
 router.post('/api/v1/:model', handlePost);
+
+
+/**
+ * This function comment is parsed by doctrine
+ * @route GET /api/v1/:model/:id
+ * @param {object} req.body.id - required
+ * @param {id} uuid of entry - not required.
+ * @returns {object} 200 - An array of user info
+ * @returns {Error}  default - Unexpected error
+ */
 router.get('/api/v1/:model/:id', handleGetOne);
+
+/**
+ * This function comment is parsed by doctrine
+ * @route PUT /api/v1/:model/:id
+ * @param {object} req.body.name - required
+ * @param {id} uuid of entry - not required.
+ * @returns {object} 200 - An array of user info
+ * @returns {Error}  default - Unexpected error
+ */
 router.put('/api/v1/:model/:id', handlePut);
+
+/**
+ * This function comment is parsed by doctrine
+ * @route DELETE /api/v1/:model/:id
+ * @param {object} req.body.name - required
+ * @param {id} uuid of entry - not required.
+ * @returns {object} 200 - An array of user info
+ * @returns {Error}  default - Unexpected error
+ */
 router.delete('/api/v1/:model/:id', handleDelete);
 
 // Route Handlers
