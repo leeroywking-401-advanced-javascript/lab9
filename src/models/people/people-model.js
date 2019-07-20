@@ -1,10 +1,23 @@
 'use strict';
-
+/**
+ *
+ * @type {Model}
+ */
 const DataModel = require('../memory.js');
 
+
+/**
+ *
+ *
+ * @class People
+ * @extends {DataModel}
+ */
 class People extends DataModel {
 
-
+  /**
+   *
+   * @returns {{firstName: {type: string, required: boolean}, lastName: {type: string, required: boolean}, id: {type: string, required: boolean}, age: {type: string, required: boolean}}}
+   */
   schema() {
     return {
       id: { required: true, type: 'string' },
@@ -14,6 +27,10 @@ class People extends DataModel {
     };
   }
 
+  /**
+   *
+   * @returns {{firstName: string, lastName: string, age: number}}
+   */
   static sampleRecord() {
     return {
       'firstName': 'Test',
