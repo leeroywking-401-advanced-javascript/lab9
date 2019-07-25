@@ -21,9 +21,9 @@ const morgan = require('morgan');
  *
  * @type {never}
  */
+const v1Router = require( `${cwd}/src/api/v1.js` );
 const errorHandler = require( `${cwd}/src/middleware/500.js`);
 const notFound = require( `${cwd}/src/middleware/404.js` );
-const v1Router = require( `${cwd}/src/api/v1.js` );
 const swagger = require(`${cwd}/src/api/swagger.js`);
 
 
